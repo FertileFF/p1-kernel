@@ -37,16 +37,16 @@ static unsigned int read_cntfrq(void)
 
 void generic_timer_init ( void )
 {
-//	interval = read_cntfrq();
-//  printf("System count freq (CNTFRQ) is: %u\n", interval);
+	interval = read_cntfrq();
+        printf("System count freq (CNTFRQ) is: %u\n", interval);
 
-	printf("interval is set to: %u\n", interval);
-	gen_timer_init();
-	gen_timer_reset(interval);
+	//printf("interval is set to: %u\n", interval);
+	//gen_timer_init();
+	//gen_timer_reset(interval);
 }
 
-void handle_generic_timer_irq( void ) 
-{
-	printf("Timer interrupt received. next in %u ticks\n\r", interval);
-	gen_timer_reset(interval);
-}
+//void handle_generic_timer_irq( void ) 
+//{
+//	printf("Timer interrupt received. next in %u ticks\n\r", interval);
+//	gen_timer_reset(interval);
+//}
