@@ -5,7 +5,7 @@
 
 //unsigned int interval = 9600000;
 #ifdef USE_QEMU
-unsigned int interval = (1 << 26); // xzl: around 1 sec
+unsigned int interval = (1 << 29-100000000); // xzl: around 1 sec
 #else
 unsigned int interval = 1 * 1000 * 1000; // xzl: around 1 sec
 #endif
